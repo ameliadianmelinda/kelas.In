@@ -1,0 +1,140 @@
+body {
+    background-color: #000000 !important;
+    font-family: 'Poppins', sans-serif;
+    color: #fbeeee !important;
+}
+
+/* Navbar styling */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 20px 40px;
+}
+
+#navbar.scrolled {
+  background-color: rgba(42, 37, 43, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Flex untuk atur posisi logo dan menu */
+#navbar > .logo {
+    display: flex;
+    align-items: center;
+}
+
+#navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+    width: 120px;
+}
+
+/* Menu styling */
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #fbeeee;
+    font-size: 500;
+    padding: 8px 18px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background: linear-gradient(90deg, #a15cf5, #c66efb);
+    color: white !important;
+}
+
+.navbar-nav .nav-link.active {
+    background: linear-gradient(90deg, #a15cf5, #c66efb);
+    color: white !important;
+    font-weight: 600;
+}
+
+/* Navbar toggler biar kelihatan di dark bg */
+.navbar-toggler {
+    margin-top: 20px;
+    border: none;
+    filter: invert(1);
+}
+
+.container-header {
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2A252B;
+}
+
+.jumbotron h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.button-container a{
+    margin-top: 50px;
+}
+
+.galeri {
+    display: flex;
+    margin-top: 80px;
+    gap: 20px;
+}
+
+.keunggulan {
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.keunggulan h3 {
+    margin-bottom: 20px;
+}
+
+.ikon-langkah {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* mitra */
+.card-logo {
+    border-radius:15px;
+}
+/* end mitra */
+
+/* footer */
+.footer p {
+    text-align: justify;
+}
+
+.footer a:hover {
+  color: #a15cf5 !important;
+  transition: 0.3s;
+}
+/* end footer */
+
+
