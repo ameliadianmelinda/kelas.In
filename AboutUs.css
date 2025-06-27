@@ -2,37 +2,45 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-.highlight {
+.navbar .nav-link.active {
   color: #dc3545;
-  font-weight: bold;
 }
 
-.section-title {
-  font-weight: bold;
-  margin-bottom: 20px;
+.box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  color: black;
 }
 
-.cta-buttons a {
-  margin: 5px;
+.box ul {
+  padding-left: 20px;
 }
 
-.team-photo {
+.card img {
   object-fit: cover;
   height: 100%;
 }
 
-.box-1, .box-2 {
-  background-color: #f8d7da;
-  height: 150px;
-  border-radius: 12px;
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.story-text {
-  max-width: 800px;
+.footer h6 {
+  color: white;
   margin-bottom: 1rem;
 }
 
-#team img {
-  height: 17px;
-  width: 200px;
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+#backToTop:hover {
+  background-color: #ffffff;
 }
