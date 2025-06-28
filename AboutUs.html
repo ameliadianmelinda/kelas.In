@@ -1,238 +1,307 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tentang Kami | Kelas.In</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="AboutUs.css">
-    <link rel="stylesheet" href="css-index.css">
-    <script src="https://kit.fontawesome.com/yourfontawesome.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Kami - Kelas.In</title>
+  <link rel="icon" type="image/png" href="asset/logo_cut.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="AboutUs.css">
+  <link rel="stylesheet" href="css-index.css" />
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-blur shadow-sm p-3">
         <div class="container-fluid">
-            <div class="logo">
-                <img src="asset/logo.png" alt="logo" />
+        <a class="navbar-brand" href="index.html">
+            <img src="asset/logo_nobg.png" alt="logo-brand" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto gap-2">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="nav-link" href="#">Kelas</a>
+            <a class="nav-link" href="#">Relawan</a>
+            <a class="nav-link active" href="#">Tentang Kami</a>
+            <a class="nav-link" href="#">FAQ</a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="#">Beranda</a>
-                    <a class="nav-link" href="#">Kelas</a>
-                    <a class="nav-link" href="#">Relawan</a>
-                    <a class="nav-link active" href="#">Tentang Kami</a>
-                    <a class="nav-link" href="#">FAQ</a>
-                </div>
-            </div>
+        </div>
         </div>
     </nav>
+    <!-- End Navbar -->
 
-    <!-- Hero -->
-    <section class="container text-center my-5 pt-5">
+    <div class="header-tentangkami d-flex justify-content-center text-center text-white">
         <h1 class="display-4 fw-bold">Tentang Kami</h1>
-    </section>
+    </div>
 
-    <!-- Deskripsi -->
-    <section class="container mb-5">
-        <div class="row g-4">
+    <!-- Tentang Kelas.In -->
+    <div class="tentang-kami-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+        <!-- Deskripsi -->
+        <div class="col-md-6 mt-5 mb-5">
+            <div class="desc-text d-flex gap-2">
+                <h3 class="text-black display-6 fw-bold">Tentang</h3>
+                <h3 class="kelasIn display-6 fw-bold">Kelas.In</h3>
+            </div>
+            <p class="text-secondary" style="text-align: justify;">
+                <strong>Kelas.In</strong> adalah ruang belajar online gratis untuk siapa saja yang ingin terus belajar tanpa terkendala biaya. Kami hadir sebagai solusi bagi pelajar, mahasiswa, hingga masyarakat umum yang ingin berkembang tanpa batas.
+            </p>
+            <p class="text-secondary" style="text-align: justify;">
+                Kami percaya bahwa pendidikan harus inklusif dan dapat diakses oleh semua orang. Karena itu, semua materi di Kelas.In disusun secara ringan, mudah dipahami, dan dapat diakses kapan saja, di mana saja.
+            </p>
+            <p class="text-secondary" style="text-align: justify;">
+                Lebih dari sekadar platform, kami adalah komunitas yang percaya bahwa ilmu yang dibagikan dengan hati dapat menjadi obor yang menerangi masa depan. Bersama, kita membangun ekosistem belajar yang terbuka, saling mendukung, dan penuh semangat.
+            </p>
+
+            <div class="d-flex gap-3 mt-4">
+            <a href="#" class="btn-ttgkami btn-light border d-flex align-items-center gap-2">
+                <i class="fas fa-info-circle"></i> Pelajari Lebih Lanjut
+            </a>
+            <a href="#" class="btn-ttgkami btn-light border d-flex align-items-center gap-2">
+                <i class="fas fa-phone"></i> Hubungi Kami
+            </a>
+            </div>
+        </div>
+
+        <!-- Fitur Kelebihan -->
+        <div class="col-md-6">
+            <div class="card-ttgkami bg-white p-4 ">
+            <div class="row g-4 text-center">
+
+                <div class="col-6">
+                <div class="mb-2">
+                    <i class="fas fa-users fa-2x text-white" style="background: linear-gradient(to bottom right, #7B61FF, #5AD7FF); padding: 15px; border-radius: 50%;"></i>
+                </div>
+                <h6 class="fw-bold text-black">Komunitas Luas</h6>
+                <p class="text-secondary small">Ribuan pelajar & pengajar aktif</p>
+                </div>
+
+                <div class="col-6">
+                <div class="mb-2">
+                    <i class="fas fa-brain fa-2x text-white" style="background: linear-gradient(to bottom right, #FF5CAC, #FFA56F); padding: 15px; border-radius: 50%;"></i>
+                </div>
+                <h6 class="fw-bold text-black">Berbasis Teknologi</h6>
+                <p class="text-secondary small">Platform adaptif & digital-first</p>
+                </div>
+
+                <div class="col-6">
+                <div class="mb-2">
+                    <i class="fas fa-clock fa-2x text-white" style="background: linear-gradient(to bottom right, #4DE3FF, #3D94FF); padding: 15px; border-radius: 50%;"></i>
+                </div>
+                <h6 class="fw-bold text-black">Cepat & Fleksibel</h6>
+                <p class="text-secondary small">Belajar kapan saja di mana saja</p>
+                </div>
+
+                <div class="col-6">
+                <div class="mb-2">
+                    <i class="fas fa-shield-alt fa-2x text-white" style="background: linear-gradient(to bottom right, #A770EF, #FDB99B); padding: 15px; border-radius: 50%;"></i>
+                </div>
+                <h6 class="fw-bold text-black">Kualitas Terjaga</h6>
+                <p class="text-secondary small">Pemateri terverifikasi & berpengalaman</p>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Visi & Misi -->
+    <div class="visi-misi-section py-5 mt-5">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="fw-bold text-black mt-5 mb-4">Visi & Misi</h2>
+                    <p class="text-secondary">Tujuan utama kami dalam membangun ekosistem belajar terbuka dan gratis</p>
+                </div>
+            </div>
+            <div class="visi-misi row g-4 justify-content-center mb-5">
+                <!-- Visi -->
+                <div class="col-md-4">
+                    <div class="p-4 card-visimisi bg-white shadow-sm h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-eye fa-2x text-white" style="background: linear-gradient(to bottom right, #8E2DE2, #4A00E0); padding: 15px; border-radius: 50%;"></i>
+                        </div>
+                        <h4 class="text-center fw-bold mb-3 text-black">Visi</h4>
+                        <p class="text-secondary">Menjadi platform pembelajaran daring yang inklusif, gratis, dan berkualitas tinggi yang dapat menjangkau seluruh lapisan masyarakat tanpa terkecuali. Kelas.In hadir untuk membangun budaya belajar yang terbuka dan kolaboratif, menciptakan ekosistem pendidikan yang saling mendukung, menyenangkan, dan berkelanjutan di Indonesia.</p>
+                    </div>
+                </div>
+
+                <!-- Misi -->
+                <div class="col-md-4">
+                    <div class="p-4 card-visimisi bg-white shadow-sm h-100">
+                    <div class="text-center mb-3">
+                        <i class="fas fa-bullseye fa-2x text-white" style="background: linear-gradient(to bottom right, #F7971E, #FFD200); padding: 15px; border-radius: 50%;"></i>
+                    </div>
+                    <h4 class="text-center fw-bold mb-3 text-black">Misi</h4>
+                    <p class="text-secondary">Menyediakan materi pembelajaran yang relevan, mudah dipahami, dan dapat diakses secara gratis kapan saja dan di mana saja. Kelas.In juga mendorong kolaborasi antara pengajar dan peserta dari berbagai daerah, serta mengembangkan teknologi edukasi yang adaptif dan personal agar setiap individu dapat belajar sesuai dengan kebutuhan dan gaya belajarnya.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- team -->
+    <section class="container mt-5">
+        <div class="judul-team d-flex gap-2 justify-content-center text-center mb-4">
+            <h3 class="text-black display-6 fw-bold mt-5 mb-4">Team</h3>
+            <h3 class="kelasIn display-6 fw-bold mt-5 mb-4">Kelas.In</h3>
+        </div>
+
+        <div class="card mb-4 mx-auto" style="max-width: 600px;">
+            <div class="row g-0">
             <div class="col-md-4">
-                <p class="fw-bold">kelas.in – Your Gateway to <span class="text-danger">Free Learning!</span></p>
+                <img src="asset/amel2.jpg" class="img-fluid rounded-4" alt="Amelia">
             </div>
             <div class="col-md-8">
-                <p>kelas.in adalah ruang belajar online gratis untuk siapa saja yang ingin terus belajar tanpa terkendala biaya.</p>
-                <p>Kami percaya bahwa pendidikan harus inklusif dan dapat diakses oleh semua orang. Materi kami ringan, mudah dipahami, dan bisa diakses kapan saja.</p>
-                <p>Kami adalah komunitas yang percaya bahwa ilmu yang dibagikan dengan hati bisa menjadi obor yang menerangi masa depan.</p>
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Amelia Dian Melinda</h5>
+                <p class="card-text" style="text-align: justify;">
+                    Founder & Web Developer Kelas.In yang merancang dan membangun platform ini. Ia memiliki semangat kuat menghadirkan pendidikan yang inklusif, gratis, dan dapat diakses oleh semua kalangan tanpa batasan.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 mx-auto" style="max-width: 600px;">
+            <div class="row g-0">
+            <div class="col-md-4">
+                <img src="asset/calista.jpg" class="img-fluid rounded-4" alt="Calista">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Calista Sasikirana</h5>
+                <p class="card-text" style="text-align: justify;">
+                    UI/UX Designer yang merancang tampilan dan pengalaman pengguna Kelas.In agar tetap nyaman, mudah dipahami, dan ramah untuk berbagai usia serta latar belakang pengunjung platform ini.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 mx-auto" style="max-width: 600px;">
+            <div class="row g-0">
+            <div class="col-md-4">
+                <img src="asset/kak mutya.jpg" class="img-fluid rounded-4" alt="Marini">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Marini Mutyasari A.A</h5>
+                <p class="card-text" style="text-align: justify;">
+                    Digital Content Manager yang mengelola seluruh materi dan strategi konten edukatif. Ia memastikan tiap konten tersusun rapi, relevan, serta mudah dipahami oleh seluruh pengguna Kelas.In.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 mx-auto" style="max-width: 600px;">
+            <div class="row g-0">
+            <div class="col-md-4">
+                <img src="asset/nanas.jpg" class="img-fluid rounded-4" alt="Nasylla">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Nasylla Ajeng Kirani</h5>
+                <p class="card-text" style="text-align: justify;">
+                    Koordinator Relawan dan Pengembang Materi. Ia menjembatani pengajar dengan peserta, serta memastikan materi yang dibagikan bermanfaat, inklusif, dan sesuai kebutuhan pengguna Kelas.In.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 mx-auto" style="max-width: 600px;">
+            <div class="row g-0">
+            <div class="col-md-4">
+                <img src="asset/raisha.jpg" class="img-fluid rounded-4" alt="Raisha">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Raisha Akmala Rizqiyah</h5>
+                <p class="card-text" style="text-align: justify;">
+                    Content Creator dan penggerak komunitas Kelas.In. Ia membuat konten edukatif yang menarik serta aktif membangun interaksi positif antara pengguna dan relawan lewat media sosial.
+                </p>
+                </div>
+            </div>
             </div>
         </div>
     </section>
 
-    <!-- Visi Misi -->
-    <section class="container my-5">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="box">
-                    <h4 class="text-center fw-bold mb-3">Visi</h4>
-                    <p class="text-center">Menjadi platform belajar daring yang inklusif, gratis, dan berkualitas untuk semua kalangan tanpa terkecuali.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box">
-                    <h4 class="text-center fw-bold mb-3">Misi</h4>
-                    <ul>
-                        <li>Menyediakan akses materi belajar gratis dan mudah dipahami.</li>
-                        <li>Menjembatani relawan pengajar dengan pembelajar di seluruh Indonesia.</li>
-                        <li>Mendorong kolaborasi komunitas dalam berbagi ilmu.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5">
-        <h2 class="text-center fw-bold mb-4">Team Kelas.In</h2>
-        <div class="card mb-4 mx-auto" style="max-width: 600px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="asset/amel2.jpg" class="img-fluid rounded-start" alt="Amelia">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Amelia Dian Melinda</h5>
-                        <p class="card-text">Web developer dan Founder kelas.in.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-4 mx-auto" style="max-width: 600px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="asset/calista.jpg" class="img-fluid rounded-start" alt="Calista">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Calista Sasikirana</h5>
-                        <p class="card-text">Desainer UI/UX yang menghadirkan pengalaman belajar yang nyaman.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-4 mx-auto" style="max-width: 600px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="asset/kak mutya.jpg" class="img-fluid rounded-start" alt="Marini">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Marini Mutyasari A.A</h5>
-                        <p class="card-text">Manajer konten digital kelas.in.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-4 mx-auto" style="max-width: 600px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="asset/nanas.jpg" class="img-fluid rounded-start" alt="Nasylla">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Nasylla Ajeng Kirani</h5>
-                        <p class="card-text">Koordinator relawan dan pengembangan materi kelas.in.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-4 mx-auto" style="max-width: 600px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="asset/raisha.jpg" class="img-fluid rounded-start" alt="Raisha">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Raisha Akmala Rizqiyah</h5>
-                        <p class="card-text">Content creator dan relawan penggerak komunitas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- Footer -->
-    <footer class="footer mt-5 pt-5 pb-4 bg-dark text-light">
+    <footer class="footer pt-5 pb-4 bg-dark text-light px-3 px-md-5 mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <img src="asset/logo.png" alt="Kelas.In" width="150" class="mb-3" />
-                    <p class="text-secondary">Solusi digital inovatif yang dirancang untuk memudahkan mahasiswa dalam mengakses ruang belajar, mengelola kegiatan perkuliahan nonformal, serta menciptakan ekosistem belajar yang lebih fleksibel, terstruktur, dan efisien sesuai kebutuhan generasi masa kini.</p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white mb-3">Navigasi</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-secondary text-decoration-none">Beranda</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Kelas</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Relawan</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Tentang Kami</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white mb-3">Kontak Kami</h6>
-                    <p class="text-secondary mb-1"><i class="fa-solid fa-envelope me-2"></i> info@kelasin.id</p>
-                    <p class="text-secondary mb-1"><i class="fa-solid fa-phone me-2"></i> +62 812-3456-7890</p>
-                    <p class="text-secondary"><i class="fa-solid fa-location-dot me-2"></i> Jakarta, Indonesia</p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white mb-3">Ikuti Kami</h6>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light fs-5"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-light fs-5"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
+        <div class="row">
+
+            <div class="col-md-5 mb-4">
+            <img src="asset/logo_nobg.png" alt="Kelas.In" width="150" class="mb-3" />
+            <p class="text-secondary">Dirancang untuk mahasiswa masa kini, Kelas.In hadir sebagai platform digital yang membantu mengakses ruang belajar, mengelola aktivitas perkuliahan nonformal, dan menciptakan ekosistem belajar yang lebih bebas, terstruktur, dan efisien.</p>
             </div>
-            <hr class="border-secondary" />
-            <div class="text-center text-secondary">&copy; 2025 Kelas.In. All rights reserved.</div>
+
+            <div class="col-md-2 mb-4">
+            <h6 class="text-white mb-3">Navigasi</h6>
+            <ul class="list-unstyled">
+                <li><a href="index.html" class="text-secondary text-decoration-none">Beranda</a></li>
+                <li><a href="#" class="text-secondary text-decoration-none">Kelas</a></li>
+                <li><a href="#" class="text-secondary text-decoration-none">Relawan</a></li>
+                <li><a href="#" class="text-secondary text-decoration-none">Tentang Kami</a></li>
+                <li><a href="#" class="text-secondary text-decoration-none">FAQ</a></li>
+            </ul>
+            </div>
+
+            <div class="col-md-2 mb-4">
+            <h6 class="text-white mb-3">Kontak Kami</h6>
+            <p class="text-secondary mb-1"><i class="fa-solid fa-envelope me-2"></i> info@kelasin.id</p>
+            <p class="text-secondary mb-1"><i class="fa-solid fa-phone me-2"></i> +62 888-7777-6666</p>
+            <p class="text-secondary"><i class="fa-solid fa-location-dot me-2"></i> Yogyakarta, Indonesia</p>
+            </div>
+
+            <div class="col-md-3 mb-4">
+            <h6 class="text-white mb-3">Ikuti Kami</h6>
+            <div class="d-flex gap-3">
+                <a href="#" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 45px; height: 40px; background-color: #E1306C;">
+                <i class="fab fa-instagram text-white"></i>
+                </a>
+                <a href="#" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px; background-color: #1DA1F2;">
+                <i class="fab fa-twitter text-white"></i>
+                </a>
+                <a href="#" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px; background-color: #0A66C2;">
+                <i class="fab fa-linkedin-in text-white"></i>
+                </a>
+                <a href="#" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px; background-color: #FF0000;">
+                <i class="fab fa-youtube text-white"></i>
+                </a>
+            </div>
+            </div>
+
+        </div>
+        <hr class="border-secondary" />
+        <div class="text-center text-secondary">&copy; 2025 Kelas.In. All rights reserved.</div>
         </div>
     </footer>
+    <!-- End Footer -->
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript Interaktif -->
     <script>
-        // Navbar shadow saat scroll
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-sm');
-            } else {
-                navbar.classList.remove('shadow-sm');
-            }
-        });
-
-        // Klik nama team muncul alert
+         // Klik nama team muncul alert
         document.querySelectorAll('.card-title').forEach(item => {
             item.addEventListener('click', function () {
                 alert(`Kamu mengklik ${this.textContent}`);
             });
         });
-
-        // Back to Top button
-        const backToTop = document.createElement('button');
-        backToTop.innerHTML = '⬆️';
-        backToTop.id = 'backToTop';
-        Object.assign(backToTop.style, {
-            position: 'fixed',
-            bottom: '30px',
-            right: '30px',
-            padding: '10px 15px',
-            borderRadius: '50%',
-            border: 'none',
-            backgroundColor: '#dc3545',
-            color: 'white',
-            display: 'none',
-            cursor: 'pointer',
-            zIndex: '999'
-        });
-        document.body.appendChild(backToTop);
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
     </script>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

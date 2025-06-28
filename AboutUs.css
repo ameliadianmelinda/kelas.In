@@ -1,46 +1,62 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: #fbeeee !important;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar .nav-link.active {
-  color: #dc3545;
+.header-tentangkami {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  background: linear-gradient(-45deg, #250e2c, #837ab6, #9d85b6, #cc8db3);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
 }
 
-.box {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 100%;
+.card-ttgkami {
+  border: 1px solid rgba(122, 120, 120, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.card-ttgkami:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-ttgkami {
+  background:  rgba(247, 241, 241, 0.40); 
   color: black;
-}
-
-.box ul {
-  padding-left: 20px;
-}
-
-.card img {
-  object-fit: cover;
-  height: 100%;
-}
-
-.card {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.footer h6 {
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.footer a {
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
   text-decoration: none;
 }
 
-.footer a:hover {
-  text-decoration: underline;
+.btn-ttgkami:hover {
+  background: rgba(247, 241, 241, 0.60);
+  color: #250e2c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-#backToTop:hover {
-  background-color: #ffffff;
+.visi-misi-section {
+  background-color: rgb(249, 245, 245);
+}
+
+.card-visimisi {
+  border: 1px solid rgba(122, 120, 120, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.card-visimisi:hover {
+  transform: translateY(-5px);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-visimisi p {
+  text-align: justify;
 }
