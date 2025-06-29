@@ -6,9 +6,16 @@
     <title>Kelas.In - FAQ</title>
     <link rel="icon" type="image/png" href="asset/logo_cut.png">
     <link rel="stylesheet" href="css-faq.css" />
+
+    <!-- file CSS Bootstrap ver 5.3.7 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons ver 1.11.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome ver 6.7.2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- file CSS AOS (Animate On Scroll) versi 2.3.4 -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    
     <style>
         html { scroll-behavior: smooth; }
         .aos-animate { will-change: transform, opacity; }
@@ -39,7 +46,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav navbar-nav ms-auto gap-2">
+                <div class="navbar-nav ms-auto gap-2"></div>
                     <a class="nav-link" href="index.html">Beranda</a>
                     <a class="nav-link" href="#">Kelas</a>
                     <a class="nav-link" href="#">Relawan</a>
@@ -56,10 +63,9 @@
         <div class="container">
             <h1 style="font-weight: bold;">Butuh Bantuan?</h1>
             <p class="lead">Tenang, di sini kamu bisa cari jawaban dari pertanyaan yang paling sering ditanya!</p>
-            
             <!-- Kolom Pencarian FAQ -->
-            <div class="searchForm" style="max-width: 600px; margin: 0 auto;">
-                <form id="searchForm" class="d-flex">
+            <div class="kolomcari searchForm" style="max-width: 600px; margin: 0 auto;">
+                <form id="kolomcari" class="d-flex">
                     <input type="text" id="searchInput" class="form-control me-2" placeholder="Cari pertanyaan...">
                     <button class="btn" type="submit">Cari</button>
                 </form>
@@ -67,7 +73,7 @@
         </div>
         <!-- Pesan Tidak Ditemukan -->
         <script>
-            document.getElementById('searchForm').addEventListener('submit', function(e) {
+            document.getElementById('kolomcari').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
                 const faqItems = document.querySelectorAll('.accordion-item');
@@ -89,65 +95,68 @@
                 }
             });
         </script>
-        <!-- Kategori Card -->
-        <div class="container searchForm">
-            <div class="row justify-content-center">
-                <div class="col-6 col-md-3 mb-4">
-                    <a href="#" class="text-decoration-none kategori-card" data-kategori="materi">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">Materi</h5>
-                            </div>
+    </div>
+
+    <!-- Kategori Cards -->
+    <div class="container searchForm mt-4">
+        <div class="row justify-content-center text-center mb-4 px-4">
+            <h3 class="mb-4">Cari Berdasarkan Kategori</h3>
+            <!-- Materi -->
+            <div class="col-6 col-md-3 d-flex mb-4">
+                <a href="#" class="text-decoration-none w-100 kategori-card" data-kategori="materi">
+                    <div class="card shadow-sm p-4 text-center">
+                        <div class="icon-circle mx-auto mb-3" style="background: linear-gradient(135deg, #f6bf02, #f2994a);">
+                            <i class="fa-solid fa-book fa-xl"></i>
                         </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <a href="#" class="text-decoration-none kategori-card" data-kategori="relawan">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">Relawan</h5>
-                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Materi</h5>
+                            <p class="text-muted small mb-0">Temukan jawaban seputar materi pembelajaran di sini.</p>
                         </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <a href="#" class="text-decoration-none kategori-card" data-kategori="kelas">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">Kelas</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-md-3 mb-4">
-                    <a href="#" class="text-decoration-none kategori-card" data-kategori="akses">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title">Akses Belajar</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
-        </div>
-
-        <!-- Tombol Lihat Semua -->
-        <div class="text-center">
-            <button class="btn btn-outline-secondary mt-5" id="lihatSemua">Lihat Semua FAQ</button>
-        </div>
-
-        <!-- Floating Bubbles -->
-        <div class="floating-icon" style="--left: 20%; --top: 20%;">
-            <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <div class="floating-icon" style="--left: 85%; --top: 60%;">
-            <i class="fa-solid fa-globe"></i>
-        </div>
-        <div class="floating-icon" style="--left: 70%; --top: 15%;">
-            <i class="fa-solid fa-award"></i>
-        </div>
-        <div class="floating-icon" style="--left: 5%; --top: 70%;">
-            <i class="fa-solid fa-trophy"></i>
+            <!-- Relawan -->
+            <div class="col-6 col-md-3 d-flex mb-4">
+                <a href="#" class="text-decoration-none w-100 kategori-card" data-kategori="relawan">
+                    <div class="card shadow-sm p-4 text-center">
+                        <div class="icon-circle mx-auto mb-3" style="background: linear-gradient(135deg, #6fcf97, #56cc9d);">
+                            <i class="bi bi-people-fill fs-1"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Relawan</h5>
+                            <p class="text-muted small mb-0">Pertanyaan umum bagi kamu yang ingin jadi relawan.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Kelas -->
+            <div class="col-6 col-md-3 d-flex mb-4">
+                <a href="#" class="text-decoration-none w-100 kategori-card" data-kategori="kelas">
+                    <div class="card shadow-sm p-4 text-center">
+                        <div class="icon-circle mx-auto mb-3" style="background: linear-gradient(135deg, #bb6bd9, #8e44ad);">
+                            <i class="bi bi-backpack-fill fs-1"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kelas</h5>
+                            <p class="text-muted small mb-0">Informasi lengkap seputar jadwal dan sistem kelas.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Akses Belajar -->
+            <div class="col-6 col-md-3 d-flex mb-4">
+                <a href="#" class="text-decoration-none w-100 kategori-card" data-kategori="akses">
+                    <div class="card shadow-sm p-4 text-center">
+                        <div class="icon-circle mx-auto mb-3" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <i class="bi bi-gear-wide-connected fs-1"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Akses Belajar</h5>
+                            <p class="text-muted small mb-0">Panduan teknis untuk mengakses materi dan fitur belajar.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -255,18 +264,26 @@
                     </div>
                 </div>
             </div>
+            <!-- Tombol Lihat Semua -->
+            <div class="text-center">
+                <button class="btn btn-outline-secondary" id="lihatSemua">Lihat Semua FAQ</button>
+            </div>
         </div>
     </div>
 
     <!-- Link ke Bantuan Langsung -->
-    <div class="text-center searchForm">
-        <h2>Masih bingung? </h2>
+    <div class="hubungics text-center searchForm">
+        <h2 style="font-weight: bold; color: white;">Masih bingung?</h2>
         <p>Hubungi tim kami untuk bantuan lebih lanjut.</p>
-        <a href="#" data-bs-toggle="modal" data-bs-target="#modalHubungi">Hubungi Sekarang</a> 
+        <button>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalHubungi">Hubungi Sekarang</a>
+        </button>
     </div>
 
     <!-- Tombol Scroll ke Atas -->
-    <button onclick="scrollToTop()" id="topBtn" title="Kembali ke Atas">⬆</button>
+    <button onclick="scrollToTop()" id="topBtn" title="Kembali ke Atas">
+        <i class="bi bi-arrow-up-circle fs-5"></i>
+    </button>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
@@ -343,13 +360,13 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer mt-5 pt-5 pb-4 bg-light text-light">
+    <footer class="footer pt-5 pb-4 bg-dark text-light px-3 px-md-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-4">
-                    <img src="asset/logo.png" alt="Kelas.In" width="150" class="mb-3" />
+                <div class="col-md-5 mb-4">
+                    <img src="asset/logo_nobg.png" alt="Kelas.In" width="150" class="mb-3" />
                     <p class="text-secondary">
-                        Solusi digital inovatif yang dirancang untuk memudahkan mahasiswa dalam mengakses ruang belajar, mengelola kegiatan perkuliahan nonformal, serta menciptakan ekosistem belajar yang lebih fleksibel, terstruktur, dan efisien sesuai kebutuhan generasi masa kini.
+                        Dirancang untuk mahasiswa masa kini, kelas.In hadir sebagai platform digital yang membantu mengakses ruang belajar, mengelola aktivitas perkuliahan nonformal, dan menciptakan ekosistem belajar yang lebih bebas, terstruktur, dan efisien.
                     </p>
                 </div>
                 <div class="col-md-2 mb-4">
