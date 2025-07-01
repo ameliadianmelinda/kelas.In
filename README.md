@@ -1,2 +1,0 @@
-# kelas.In
-UAS PPW
