@@ -1,0 +1,279 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fbeeee !important;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* tombol */
+.btn {
+    border-radius: 20px;
+}
+
+/* card */
+.card-kenapa {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background-color: white;
+}
+
+.card-isi p {
+    text-align: justify;
+}
+
+.card-isi {
+    border: 1px solid rgba(122, 120, 120, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(2, 2, 2, 2.1);
+}
+
+.card-isi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(5, 5, 5, 0.15);
+}
+
+/* tabel */
+
+/* WARNA UNGGU UTAMA */
+.text-purple {
+  color: #9d85b6;
+}
+
+.card-kenapa-container  {
+  margin-top: 100px;
+}
+
+/* Wrapper keseluruhan */
+.top-relawan-section {
+  background-color: rgb(249, 245, 245);
+}
+
+/* Tabel wrapper dengan bayangan */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(157, 133, 182, 0.15);
+  background-color: white;
+}
+
+/* Tabel gaya */
+.top-relawan-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 768px;
+  font-size: 16px;
+}
+
+.top-relawan-table thead th {
+  background-color: #9d85b6; /* Ungu branding */
+  color: #ffffff;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.top-relawan-table thead th:first-child {
+  text-align: center;
+  width: 60px;
+}
+
+.top-relawan-table tbody td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+}
+
+/* Kecuali kolom pertama (No) tetap rata tengah */
+.top-relawan-table tbody td:first-child,
+.top-relawan-table thead th:first-child {
+  text-align: center;
+}
+
+.top-relawan-table tbody tr:hover {
+  background-color: #f1e9fa;
+  transition: 0.3s ease;
+}
+
+/* Responsive Font */
+@media (max-width: 768px) {
+  .top-relawan-table {
+    font-size: 14px;
+  }
+}
+
+/* lebar tabel */
+.top-relawan-table thead th:nth-child(1),
+.top-relawan-table tbody td:nth-child(1) {
+  width: 20px;       /* Kolom No */
+  text-align: center;
+}
+
+.top-relawan-table thead th:nth-child(2),
+.top-relawan-table tbody td:nth-child(2) {
+  width: 100px;      /* Nama */
+}
+
+.top-relawan-table thead th:nth-child(3),
+.top-relawan-table tbody td:nth-child(3) {
+  width: 100px;      /* Asal Kampus */
+}
+
+.top-relawan-table thead th:nth-child(4),
+.top-relawan-table tbody td:nth-child(4) {
+  width: 100px;      /* Bidang Kontribusi */
+}
+
+/* testimoni */
+.text-purple {
+  color: #6e4b8f;
+}
+
+.bg-purple {
+  background-color: #6e4b8f !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 50%;
+  opacity: 0.5;
+  border: none;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+.card {
+  border: 1px solid rgba(122, 120, 120, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(2, 2, 2, 2.1);
+}
+
+.carousel-item p {
+  text-align: justify;
+}
+
+/* Tombol Scroll ke Atas */
+#topBtn {
+  background-color: #250E2C;
+  color: #CC8DB3;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+  background-color: #CC8DB3;
+  color: #250E2C;
+}
+
+/* modal */
+.btn-purple {
+  background-color: #9d85b6;
+}
+
+.btn-purple:hover {
+  background-color: #8a74a5;
+}
+
+.text-purple {
+  color: #9d85b6;
+}
+
+@media (max-width: 576px) {
+  /* Header Relawan */
+  .header h1 {
+    font-size: 2rem !important; 
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .header p {
+    font-size: 14px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* Tombol header relawan (jika ada) */
+  .btn-relawan {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Bagian Konten */
+  .relawan-section {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .relawan-section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .relawan-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .relawan-section p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  .relawan-card {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    background: white;
+  }
+
+  .relawan-card h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .relawan-card p {
+    font-size: 14px;
+  }
+
+  .relawan-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .subjudul-cerita {
+    text-align: justify;
+  }
+
+  .carousel-inner {
+    margin-top: 2px !important;
+  }
+}
+
+

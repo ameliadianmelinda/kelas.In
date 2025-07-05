@@ -60,3 +60,110 @@ body {
 .card-visimisi p {
   text-align: justify;
 }
+
+/* Tombol Scroll ke Atas */
+#topBtn {
+  background-color: #250E2C;
+  color: #CC8DB3;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+  background-color: #CC8DB3;
+  color: #250E2C;
+}
+
+@media (max-width: 576px) {
+  .desc-text {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .desc-text-utama  {
+    margin-top: 2px !important;
+  }
+
+  .tentang-kami-section .col-md-6 {
+    width: 100%;
+  }
+
+  .tentang-kami-section .desc-text h3,
+  .tentang-kami-section p {
+    text-align: center;;
+  }
+  
+
+  .tentang-kami-section .d-flex.gap-3 {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-ttgkami .row.g-4 {
+    row-gap: 24px;       /* jarak vertikal antar fitur */
+    column-gap: 0;       /* nggak perlu jarak horizontal di mobile */
+  }
+
+  .card-ttgkami .col-6 {
+    width: 100%;         /* fitur ditampilkan 1 kolom per baris */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;     /* padding atas bawah biar simetris */
+  }
+
+  .card-ttgkami .col-6 h6 {
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+
+  .card-ttgkami .col-6 p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .visi-misi .col-md-4 {
+    width: 100%;
+  }
+
+  .judul-team {
+    flex-direction: column;
+  }
+
+  .card .row.g-0 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card .col-md-4,
+  .card .col-md-8 {
+    width: 100%;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .header-tentangkami h1 {
+    font-size: 2rem;
+  }
+
+  .btn-ttgkami {
+    width: 100%;
+    justify-content: center;
+  }
+}

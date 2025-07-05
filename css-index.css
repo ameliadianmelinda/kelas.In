@@ -296,3 +296,220 @@ body {
   transition: transform 0.3s ease;
 }
 /* end footer */
+
+/* tombol naik */
+/* Tombol Scroll ke Atas */
+#topBtn {
+  background-color: #250E2C;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37, 14, 44, 0.18);
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+#topBtn:hover {
+  background-color: #CC8DB3;
+  color: #250E2C;
+  box-shadow: 0 6px 20px rgba(204, 141, 179, 0.22);
+}
+
+@media (max-width: 576px) {
+  #topBtn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+    bottom: 18px;
+    right: 18px;
+  }
+}
+/* end tombol */
+
+/* Responsive: saat layar <= 768px (tablet & mobile) */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 100px;
+    height: auto;
+  }
+
+  .navbar-nav {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Header Responsif */
+  .header {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 2.7rem;
+    line-height: 1.6;
+  }
+
+  .header p.lead {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+
+  .header .container {
+    padding: 0 15px;
+  }
+
+  #btn-header {
+    display: block;
+    align-items: center;
+    width: 50%;
+    margin: 10px auto 20px auto;
+    padding: 12px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .floating-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  /* Keunggulan */
+  .keunggulan h3 {
+    font-size: 1.5rem;
+    text-align: center;
+   
+  }
+
+  .keunggulan,
+  .statistik-card,
+  .testi-tokoh{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card .card-body p,
+  .penggunaan p,
+  .card-testi .isi {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  /* penggunaan */
+  .penggunaan h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* statistik */
+  .statistik {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .statistik-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .statistik-card .item {
+    width: 100%;
+    max-width: 250px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    border: none;
+  }
+
+  .statistik-card .item h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .statistik-card .item p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* Testi Tokoh */
+  .testi-tokoh .gambar {
+    margin-bottom: 20px;
+  }
+
+  .testi-tokoh .card-testi {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Mitra */
+  .mitra-img .mitra-box {
+    width: 150px;
+    height: 80px;
+  }
+
+  .mitra-img {
+    gap: 1rem !important; /* Lebih rapat di HP */
+  }
+
+  /* CTA */
+  .cta {
+    padding: 40px 20px;
+  }
+
+  .cta h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .cta p {
+    font-size: 14px !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .btn-cta {
+    width: 50%;
+    max-width: 300px;
+    padding: 12px 0;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px auto 0px auto;
+    display: block;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer .col-md-2,
+  .footer .col-md-3,
+  .footer .col-md-5 {
+    margin-bottom: 30px;
+  }
+
+  .footer .desc {
+    text-align: justify;
+  }
+
+}

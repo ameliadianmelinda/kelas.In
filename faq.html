@@ -6,6 +6,7 @@
     <title>Kelas.In - FAQ</title>
     <link rel="icon" type="image/png" href="asset/logo_cut.png">
     <link rel="stylesheet" href="css-faq.css" />
+    <link rel="stylesheet" href="css-index.css">
 
     <!-- file CSS Bootstrap ver 5.3.7 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -22,7 +23,6 @@
     </style>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 800 });
@@ -36,24 +36,30 @@
         });
     </script>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-blur shadow-sm p-3">
-        <div class="container-fluid" id="navbar">
-            <a class="navbar-brand" href="#">
-                <img src="asset/logo_nobg.png" alt="logo-brand">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto gap-2"></div>
-                    <a class="nav-link" href="index.html">Beranda</a>
-                    <a class="nav-link" href="#">Kelas</a>
-                    <a class="nav-link" href="#">Relawan</a>
-                    <a class="nav-link" href="AboutUs.html">Tentang Kami</a>
-                    <a class="nav-link active" href="#">FAQ</a>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm p-3" style="background-color: white;">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="asset/logo_nobg.png" alt="logo-brand" />
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav gap-3">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="nav-link" href="kelas.html">Kelas</a>
+            <a class="nav-link" href="relawan.html">Relawan</a>
+            <a class="nav-link" href="AboutUs.html">Tentang Kami</a>
+            <a class="nav-link active" href="#">FAQ</a>
             </div>
+        </div>
         </div>
     </nav>
     <!-- end navbar -->
@@ -71,36 +77,41 @@
                 </form>
             </div>
         </div>
-        <!-- Pesan Tidak Ditemukan -->
-        <script>
-            document.getElementById('kolomcari').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
-                const faqItems = document.querySelectorAll('.accordion-item');
-                let found = false;
-                faqItems.forEach(item => {
-                    const btn = item.querySelector('.accordion-button');
-                    const question = btn ? btn.textContent.toLowerCase() : '';
-                    if (keyword && question.includes(keyword)) {
-                        item.style.display = 'block';
-                        found = true;
-                    } else if (keyword) {
-                        item.style.display = 'none';
-                    } else {
-                        item.style.display = 'block';
-                    }
-                });
-                if (keyword && !found) {
-                    alert('Pertanyaan tidak ditemukan. Hubungi tim kami untuk bantuan lebih lanjut.');
+    <!-- Pencarian FAQ -->
+    <script>
+        function jalankanPencarianFAQ() {
+            const keyword = document.getElementById('searchInput').value.toLowerCase();
+            const faqItems = document.querySelectorAll('.accordion-item');
+            document.getElementById('faqAccordion').scrollIntoView({ behavior: 'smooth' });
+
+            let found = false;
+            faqItems.forEach(item => {
+                const question = item.querySelector('.accordion-button')?.textContent.toLowerCase() || "";
+                if (keyword.trim() === "" || question.includes(keyword)) {
+                    item.style.display = 'block';
+                    found = true;
+                } else {
+                    item.style.display = 'none';
                 }
             });
-        </script>
+
+            if (keyword && !found) {
+                alert('Pertanyaan tidak ditemukan. Hubungi tim kami untuk bantuan lebih lanjut.');
+            }
+        }
+
+        document.getElementById('kolomcari').addEventListener('submit', function (e) {
+            e.preventDefault();
+            jalankanPencarianFAQ();
+        });
+    </script>
+
     </div>
 
     <!-- Kategori Cards -->
-    <div class="container searchForm mt-4">
+    <div class="container searchForm1 mt-4">
         <div class="row justify-content-center text-center mb-4 px-4">
-            <h3 class="mb-4">Cari Berdasarkan Kategori</h3>
+            <h3 class="mb-4 text-black">Cari Berdasarkan Kategori</h3>
             <!-- Materi -->
             <div class="col-6 col-md-3 d-flex mb-4">
                 <a href="#" class="text-decoration-none w-100 kategori-card" data-kategori="materi">
@@ -162,118 +173,127 @@
 
     <!-- FAQ Accordion -->
     <div class="faqAccordion fade-in mt-5 mb-5">
-        <div class="container" id="faqAccordion">
-            <h2 class="mb-4 text-center">Frequently Asked Questions</h2>
-            <!-- Kategori: Materi -->
-            <div class="accordion-item" data-kategori="materi">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                        Bagaimana cara mengakses materi?
-                    </button>
-                </h2>
-                <div id="faq1" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Kamu bisa akses materi setelah login dan memilih kelas yang tersedia di halaman “Kelas”.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" data-kategori="materi">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                        Apakah saya bisa download materi?
-                    </button>
-                </h2>
-                <div id="faq2" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Sebagian besar materi bisa diunduh, kecuali yang bersifat interaktif seperti video dan quiz.
-                    </div>
-                </div>
-            </div>
-            <!-- Kategori: Relawan -->
-            <div class="accordion-item" data-kategori="relawan">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                        Bagaimana cara jadi relawan?
-                    </button>
-                </h2>
-                <div id="faq3" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Kunjungi halaman “Relawan” dan isi formulir pendaftaran. Kami akan hubungi kamu via email.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" data-kategori="relawan">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                        Apakah relawan mendapat sertifikat?
-                    </button>
-                </h2>
-                <div id="faq4" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Ya, semua relawan aktif yang menyelesaikan kontribusinya akan mendapat e-sertifikat resmi.
-                    </div>
-                </div>
-            </div>
-            <!-- Kategori: Kelas -->
-            <div class="accordion-item" data-kategori="kelas">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                        Apakah semua kelas gratis?
-                    </button>
-                </h2>
-                <div id="faq5" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Ya, seluruh kelas di Kelas.In saat ini tersedia secara gratis untuk umum.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" data-kategori="kelas">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                        Berapa lama saya bisa akses kelas?
-                    </button>
-                </h2>
-                <div id="faq6" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Setelah mendaftar, kamu bisa mengakses kelas kapan saja tanpa batas waktu selama platform aktif.
-                    </div>
-                </div>
-            </div>
-            <!-- Kategori: Akses Belajar -->
-            <div class="accordion-item" data-kategori="akses">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-                        Bagaimana jika saya lupa password?
-                    </button>
-                </h2>
-                <div id="faq7" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Klik tombol “Lupa Password” di halaman login, lalu ikuti petunjuk reset melalui email.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" data-kategori="akses">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
-                        Apakah saya bisa akses lewat HP?
-                    </button>
-                </h2>
-                <div id="faq8" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Tentu! Kelas.In bisa diakses melalui browser di laptop, tablet, maupun ponsel.
-                    </div>
-                </div>
-            </div>
-            <!-- Tombol Lihat Semua -->
-            <div class="text-center">
-                <button class="btn btn-outline-secondary" id="lihatSemua">Lihat Semua FAQ</button>
+    <div class="container" id="faqAccordion">
+        <h2 class="mb-4 text-center">Frequently Asked Questions</h2>
+
+        <!-- Kategori: Materi -->
+        <div class="accordion-item" data-kategori="materi">
+        <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+            Bagaimana cara mengakses materi?
+            </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Kamu bisa akses materi setelah login dan memilih kelas yang tersedia di halaman “Kelas”.
             </div>
         </div>
+        </div>
+
+        <div class="accordion-item" data-kategori="materi">
+        <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            Apakah saya bisa download materi?
+            </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Sebagian besar materi bisa diunduh, kecuali yang bersifat interaktif seperti video dan quiz.
+            </div>
+        </div>
+        </div>
+
+        <!-- Kategori: Relawan -->
+        <div class="accordion-item" data-kategori="relawan">
+        <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            Bagaimana cara jadi relawan?
+            </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Kunjungi halaman “Relawan” dan isi formulir pendaftaran. Kami akan hubungi kamu via email.
+            </div>
+        </div>
+        </div>
+
+        <div class="accordion-item" data-kategori="relawan">
+        <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+            Apakah relawan mendapat sertifikat?
+            </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Ya, semua relawan aktif yang menyelesaikan kontribusinya akan mendapat e-sertifikat resmi.
+            </div>
+        </div>
+        </div>
+
+        <!-- Kategori: Kelas -->
+        <div class="accordion-item" data-kategori="kelas">
+        <h2 class="accordion-header" id="heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+            Apakah semua kelas gratis?
+            </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Ya, seluruh kelas di Kelas.In saat ini tersedia secara gratis untuk umum.
+            </div>
+        </div>
+        </div>
+
+        <div class="accordion-item" data-kategori="kelas">
+        <h2 class="accordion-header" id="heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+            Berapa lama saya bisa akses kelas?
+            </button>
+        </h2>
+        <div id="faq6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Setelah mendaftar, kamu bisa mengakses kelas kapan saja tanpa batas waktu selama platform aktif.
+            </div>
+        </div>
+        </div>
+
+        <!-- Kategori: Akses Belajar -->
+        <div class="accordion-item" data-kategori="akses">
+        <h2 class="accordion-header" id="heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+            Bagaimana jika saya lupa password?
+            </button>
+        </h2>
+        <div id="faq7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Klik tombol “Lupa Password” di halaman login, lalu ikuti petunjuk reset melalui email.
+            </div>
+        </div>
+        </div>
+
+        <div class="accordion-item" data-kategori="akses">
+        <h2 class="accordion-header" id="heading8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+            Apakah saya bisa akses lewat HP?
+            </button>
+        </h2>
+        <div id="faq8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+            Tentu! Kelas.In bisa diakses melalui browser di laptop, tablet, maupun ponsel.
+            </div>
+        </div>
+        </div>
+
+        <!-- Tombol Lihat Semua -->
+        <div class="text-center">
+        <button class="btn btn-outline-secondary" id="lihatSemua">Lihat Semua FAQ</button>
+        </div>
+    </div>
     </div>
 
     <!-- Link ke Bantuan Langsung -->
     <div class="hubungics text-center searchForm">
-        <h2 style="font-weight: bold; color: white;">Masih bingung?</h2>
+        <h2 style="font-weight: bold; color: white;" id="text">Masih bingung?</h2>
         <p>Hubungi tim kami untuk bantuan lebih lanjut.</p>
         <button>
             <a href="#" data-bs-toggle="modal" data-bs-target="#modalHubungi">Hubungi Sekarang</a>
@@ -288,44 +308,98 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JS FAQ Filter + Scroll -->
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
         const kategoriCards = document.querySelectorAll('.kategori-card');
         const faqItems = document.querySelectorAll('.accordion-item');
         const btnLihatSemua = document.getElementById('lihatSemua');
+        const searchForm = document.getElementById('kolomcari');
+        const searchInput = document.getElementById('searchInput');
+        const faqAccordion = document.getElementById('faqAccordion');
 
+        // Fungsi untuk menutup collapse Bootstrap pada elemen tertentu
+        function tutupCollapse(item) {
+            const collapseEl = item.querySelector('.accordion-collapse');
+            if (collapseEl && collapseEl.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(collapseEl);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+            }
+        }
+
+        // Filter berdasarkan kategori
         kategoriCards.forEach(card => {
             card.addEventListener('click', function (e) {
-                e.preventDefault();
-                const kategori = this.getAttribute('data-kategori');
-                faqItems.forEach(item => {
-                    item.style.display = (item.getAttribute('data-kategori') === kategori) ? 'block' : 'none';
-                });
-                document.getElementById("faqAccordion").scrollIntoView({ behavior: "smooth" });
+            e.preventDefault();
+            const kategori = this.getAttribute('data-kategori');
+
+            faqItems.forEach(item => {
+                if (item.getAttribute('data-kategori') === kategori) {
+                item.classList.remove('d-none');
+                } else {
+                item.classList.add('d-none');
+                tutupCollapse(item);
+                }
+            });
+
+            faqAccordion.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
+        // Tombol lihat semua FAQ
         btnLihatSemua.addEventListener('click', () => {
-            faqItems.forEach(item => item.style.display = 'block');
-            document.getElementById("faqAccordion").scrollIntoView({ behavior: "smooth" });
+            faqItems.forEach(item => {
+            item.classList.remove('d-none');
+            });
+            faqAccordion.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Fungsi pencarian FAQ
+        function jalankanPencarianFAQ() {
+            const keyword = searchInput.value.toLowerCase().trim();
+            let found = false;
+
+            faqItems.forEach(item => {
+            const question = item.querySelector('.accordion-button')?.textContent.toLowerCase() || "";
+            if (keyword === "" || question.includes(keyword)) {
+                item.classList.remove('d-none');
+                found = true;
+            } else {
+                item.classList.add('d-none');
+                tutupCollapse(item);
+            }
+            });
+
+            if (keyword && !found) {
+            alert('Pertanyaan tidak ditemukan. Hubungi tim kami untuk bantuan lebih lanjut.');
+            } else {
+            faqAccordion.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Event submit pencarian
+        searchForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            jalankanPencarianFAQ();
         });
 
         // Tombol scroll ke atas
-        if (document.documentElement.scrollHeight > window.innerHeight) {
-            window.addEventListener('scroll', function () {
-                const topBtn = document.getElementById("topBtn");
-                if (!topBtn) return;
-                if (window.scrollY > 50) {
-                    topBtn.style.display = "block";
-                } else {
-                    topBtn.style.display = "none";
-                }
+        const topBtn = document.getElementById("topBtn");
+        if (topBtn) {
+            window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+            });
+            topBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
             });
         }
+        });
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
     </script>
 
     <!-- Modal Hubungi Kami -->
@@ -359,45 +433,67 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer pt-5 pb-4 bg-dark text-light px-3 px-md-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 mb-4">
-                    <img src="asset/logo_nobg.png" alt="Kelas.In" width="150" class="mb-3" />
-                    <p class="text-secondary">
-                        Dirancang untuk mahasiswa masa kini, kelas.In hadir sebagai platform digital yang membantu mengakses ruang belajar, mengelola aktivitas perkuliahan nonformal, dan menciptakan ekosistem belajar yang lebih bebas, terstruktur, dan efisien.
-                    </p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white mb-3">Navigasi</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-secondary text-decoration-none">Beranda</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Kelas</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none">Relawan</a></li>
-                        <li><a href="AboutUs.html" class="text-secondary text-decoration-none">Tentang Kami</a></li>
-                        <li><a href="faq.html" class="text-secondary text-decoration-none">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white mb-3">Kontak Kami</h6>
-                    <p class="text-secondary mb-1"><i class="fa-solid fa-envelope me-2"></i> info@kelasin.id</p>
-                    <p class="text-secondary mb-1"><i class="fa-solid fa-phone me-2"></i> +62 812-3456-7890</p>
-                    <p class="text-secondary"><i class="fa-solid fa-location-dot me-2"></i> Jakarta, Indonesia</p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white mb-3">Ikuti Kami</h6>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light fs-5"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-light fs-5"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-secondary" />
-            <div class="text-center text-secondary">&copy; 2025 Kelas.In. All rights reserved.</div>
+  <!-- footer -->
+  <footer class="footer pt-5 pb-4 bg-dark text-light px-3 px-md-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 mb-4">
+          <img src="asset/logo_nobg.png" alt="Kelas.In" width="150" class="mb-3" />
+          <p class="desc text-secondary">Dirancang untuk mahasiswa masa kini, kelas.In hadir sebagai platform digital yang membantu mengakses ruang belajar, mengelola aktivitas perkuliahan nonformal, dan menciptakan ekosistem belajar yang lebih bebas, terstruktur, dan efisien.</p>
         </div>
-    </footer>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="text-white mb-3">Navigasi</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-secondary text-decoration-none">Beranda</a></li>
+            <li><a href="kelas.html" class="text-secondary text-decoration-none">Kelas</a></li>
+            <li><a href="relawan.html" class="text-secondary text-decoration-none">Relawan</a></li>
+            <li><a href="AboutUs.html" class="text-secondary text-decoration-none">Tentang Kami</a></li>
+            <li><a href="faq.html" class="text-secondary text-decoration-none">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="text-white mb-3">Kontak Kami</h6>
+          <p class="text-secondary mb-1"><i class="fa-solid fa-envelope me-2"></i> info@kelasin.id</p>
+          <p class="text-secondary mb-1"><i class="fa-solid fa-phone me-2"></i> +62 888-7777-6666</p>
+          <p class="text-secondary"><i class="fa-solid fa-location-dot me-2"></i> Yogyakarta, Indonesia</p>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white mb-3">Ikuti Kami</h6>
+          <div class="d-flex gap-3">
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/amikomjogja/" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 45px; height: 40px; background-color: #E1306C;">
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+
+            <!-- Twitter  -->
+            <a href="https://x.com/amikomyk" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px; background-color: #1DA1F2;">
+              <i class="fab fa-twitter text-white"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://id.linkedin.com/school/universitasamikomyogyakarta/" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px; background-color: #0A66C2;">
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@amikomjogjavideo" class="card-kontak d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px; background-color: #FF0000;">
+              <i class="fab fa-youtube text-white"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary" />
+      <div class="text-center text-secondary">&copy; 2025 Kelas.In. All rights reserved.</div>
+    </div>
+  </footer>
+  <!-- end footer -->
 </body>
 </html>
