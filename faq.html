@@ -404,34 +404,51 @@
 
     <!-- Modal Hubungi Kami -->
     <div class="modal fade" id="modalHubungi" tabindex="-1" aria-labelledby="modalHubungiLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form onsubmit="event.preventDefault(); alert('Pertanyaan terkirim!');">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalHubungiLabel">Form Pertanyaan</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pesan" class="form-label">Pertanyaan</label>
-                            <textarea class="form-control" id="pesan" rows="3" required></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Kirim</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header text-white" style="background-color: #6f42c1;">
+        <h5 class="modal-title fw-semibold" id="modalHubungiLabel">Form Pertanyaan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <div class="modal-body px-4">
+        <form id="formPertanyaan" onsubmit="handleSubmit(event)">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="pesan" class="form-label">Pertanyaan</label>
+            <textarea class="form-control" id="pesan" rows="3" required></textarea>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn text-white" style="background-color: #6f42c1;">Kirim</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+</div>
+
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // cegah reload
+
+            alert('Pertanyaan terkirim!');
+
+            // kosongkan form
+            document.getElementById('formPertanyaan').reset();
+
+            // tutup modal (jika kamu ingin otomatis menutup juga)
+            const modalElement = document.getElementById('modalHubungi');
+            const modal = bootstrap.Modal.getInstance(modalElement);
+            modal.hide();
+        }
+    </script>
 
   <!-- footer -->
   <footer class="footer pt-5 pb-4 bg-dark text-light px-3 px-md-5">
