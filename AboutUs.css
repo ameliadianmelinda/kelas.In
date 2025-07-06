@@ -137,10 +137,6 @@ body {
     width: 100%;
   }
 
-  .judul-team {
-    flex-direction: column;
-  }
-
   .card .row.g-0 {
     flex-direction: column;
     text-align: center;
