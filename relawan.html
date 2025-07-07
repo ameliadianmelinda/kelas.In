@@ -59,60 +59,60 @@
 
     <!-- Modal Daftar Relawan -->
     <div class="modal fade" id="modalDaftar" tabindex="-1" aria-labelledby="modalDaftarLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-4 shadow">
-        <div class="modal-header bg-purple text-white">
-            <h5 class="modal-title fw-semibold" id="modalDaftarLabel">Formulir Pendaftaran Relawan</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+            <div class="modal-header bg-purple text-white">
+                <h5 class="modal-title fw-semibold" id="modalDaftarLabel">Formulir Pendaftaran Relawan</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body px-4">
+                <form id="formDaftar" onsubmit="kirimForm(event)">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nama" required />
+                </div>
+                <div class="mb-3">
+                    <label for="kampus" class="form-label">Asal Kampus</label>
+                    <input type="text" class="form-control" id="kampus" required />
+                </div>
+                <div class="mb-3">
+                    <label for="bidang" class="form-label">Bidang Kontribusi</label>
+                    <select class="form-select" id="bidang" required>
+                    <option selected disabled>Pilih bidang</option>
+                    <option value="pengajar">Pengajar</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="tim media">Tim Media & Desain</option>
+                    <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Alamat Email</label>
+                    <input type="email" class="form-control" id="email" required />
+                </div>
+                <div class="mb-3">
+                    <label for="alasan" class="form-label">Alasan Bergabung</label>
+                    <textarea class="form-control" id="alasan" rows="3" required></textarea>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-purple text-white">Kirim</button>
+                </div>
+                </form>
+            </div>
+            </div>
         </div>
-        <div class="modal-body px-4">
-            <form id="formDaftar" onsubmit="kirimForm(event)">
-            <div class="mb-3">
-                <label for="nama" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama" required />
-            </div>
-            <div class="mb-3">
-                <label for="kampus" class="form-label">Asal Kampus</label>
-                <input type="text" class="form-control" id="kampus" required />
-            </div>
-            <div class="mb-3">
-                <label for="bidang" class="form-label">Bidang Kontribusi</label>
-                <select class="form-select" id="bidang" required>
-                <option selected disabled>Pilih bidang</option>
-                <option value="pengajar">Pengajar</option>
-                <option value="mentor">Mentor</option>
-                <option value="tim media">Tim Media & Desain</option>
-                <option value="lainnya">Lainnya</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Alamat Email</label>
-                <input type="email" class="form-control" id="email" required />
-            </div>
-            <div class="mb-3">
-                <label for="alasan" class="form-label">Alasan Bergabung</label>
-                <textarea class="form-control" id="alasan" rows="3" required></textarea>
-            </div>
-            <div class="text-end">
-                <button type="submit" class="btn btn-purple text-white">Kirim</button>
-            </div>
-            </form>
-        </div>
-        </div>
-    </div>
     </div>
     <!-- Modal Sukses -->
     <div class="modal fade" id="modalSukses" tabindex="-1" aria-labelledby="modalSuksesLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-4 shadow text-center p-4">
-        <div class="modal-body">
-            <i class="fa-solid fa-circle-check fa-3x text-success mb-3"></i>
-            <h5 class="fw-bold">Pendaftaran Berhasil!</h5>
-            <p class="text-secondary mb-4">Terima kasih sudah bergabung menjadi relawan. Tunggu konfirmasi kami melalui email yang sudah Anda lampirkan.</p>
-            <button type="button" class="btn btn-purple text-white" onclick="window.location.href='relawan.html'">Tutup</button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow text-center p-4">
+                <div class="modal-body">
+                    <i class="fa-solid fa-circle-check fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold">Pendaftaran Berhasil!</h5>
+                    <p class="text-secondary mb-4">Terima kasih sudah bergabung menjadi relawan. Tunggu konfirmasi kami melalui email yang sudah Anda lampirkan.</p>
+                    <button type="button" class="btn btn-purple text-white" onclick="window.location.href='relawan.html'">Tutup</button>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
     </div>
 
 
@@ -411,21 +411,21 @@
             </div>
 
             <div class="col-md-2 mb-4">
-            <h6 class="text-white mb-3">Navigasi</h6>
-            <ul class="list-unstyled">
-                <li><a href="index.html" class="text-secondary text-decoration-none">Beranda</a></li>
-                <li><a href="kelas.html" class="text-secondary text-decoration-none">Kelas</a></li>
-                <li><a href="#" class="text-secondary text-decoration-none">Relawan</a></li>
-                <li><a href="AboutUs.html" class="text-secondary text-decoration-none">Tentang Kami</a></li>
-                <li><a href="faq.html" class="text-secondary text-decoration-none">FAQ</a></li>
-            </ul>
+                <h6 class="text-white mb-3">Navigasi</h6>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-secondary text-decoration-none">Beranda</a></li>
+                    <li><a href="kelas.html" class="text-secondary text-decoration-none">Kelas</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Relawan</a></li>
+                    <li><a href="AboutUs.html" class="text-secondary text-decoration-none">Tentang Kami</a></li>
+                    <li><a href="faq.html" class="text-secondary text-decoration-none">FAQ</a></li>
+                </ul>
             </div>
 
             <div class="col-md-2 mb-4">
-            <h6 class="text-white mb-3">Kontak Kami</h6>
-            <p class="text-secondary mb-1"><i class="fa-solid fa-envelope me-2"></i> info@kelasin.id</p>
-            <p class="text-secondary mb-1"><i class="fa-solid fa-phone me-2"></i> +62 888-7777-6666</p>
-            <p class="text-secondary"><i class="fa-solid fa-location-dot me-2"></i> Yogyakarta, Indonesia</p>
+                <h6 class="text-white mb-3">Kontak Kami</h6>
+                <p class="text-secondary mb-1"><i class="fa-solid fa-envelope me-2"></i> info@kelasin.id</p>
+                <p class="text-secondary mb-1"><i class="fa-solid fa-phone me-2"></i> +62 888-7777-6666</p>
+                <p class="text-secondary"><i class="fa-solid fa-location-dot me-2"></i> Yogyakarta, Indonesia</p>
             </div>
 
             <div class="col-md-3 mb-4">
@@ -462,9 +462,6 @@
         </div>
     </footer>
     <!-- end footer -->
-
-    
-
     
 </body>
 </html>

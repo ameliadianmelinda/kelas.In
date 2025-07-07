@@ -135,43 +135,6 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-  background-color: #090229;
-  color: #cfcfe2;
-  font-size: 14px;
-}
-
-.footer-logo {
-  width: 120px;
-}
-
-.footer h5 {
-  color: white;
-  font-weight: 600;
-  margin-bottom: 12px;
-  position: relative;
-}
-
-.footer h5::after {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: #a855f7;
-  margin-top: 8px;
-}
-
-.footer a {
-  color: #cfcfe2;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 6px;
-  transition: 0.2s;
-}
-
-.footer a:hover {
-  color: #ffffff;
-}
 
 .social-icons a {
   color: #a855f7;
@@ -183,16 +146,6 @@ body {
   color: white;
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 13px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  text-align: center;
-  padding: 16px 0;
-}
 
 /* Tombol Scroll ke Atas */
 #topBtn {
