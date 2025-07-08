@@ -320,19 +320,6 @@
     });
   });
 
-  // Handle submit form pendaftaran via WhatsApp
-  document.getElementById('formDaftar')?.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const nama = document.getElementById('nama').value;
-    const kelas = document.getElementById('kelas').value;
-    const wa = document.getElementById('wa').value;
-    const pesan = `Halo Admin Kelas.In!%0ASaya ingin daftar kelas berikut:%0A- Nama: ${nama}%0A- Kelas: ${kelas}%0A- No. WA: ${wa}`;
-    const nomorTujuan = '6289530512412';
-    const link = `https://wa.me/${nomorTujuan}?text=${pesan}`;
-    window.open(link, '_blank');
-    bootstrap.Modal.getInstance(document.getElementById('modalDaftar')).hide();
-    this.reset();
-  });
 </script>
 
 </body>
